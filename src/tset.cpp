@@ -6,7 +6,7 @@
 // Множество - реализация через битовые поля
 
 #include "tset.h"
-/*
+
 TSet::TSet(int mp) : BitField(-1)
 {
 }
@@ -23,8 +23,9 @@ TSet::TSet(const TBitField &bf) : BitField(-1)
 
 TSet::operator TBitField()
 {
+    return 0;
 }
-*/
+
 
 int TSet::GetMaxPower(void) const // получить макс. к-во эл-тов
 {
@@ -35,7 +36,7 @@ int TSet::IsMember(const int Elem) const // элемент множества?
 {
     return 0;
 }
-/*
+
 void TSet::InsElem(const int Elem) // включение элемента множества
 {
 }
@@ -43,7 +44,7 @@ void TSet::InsElem(const int Elem) // включение элемента мно
 void TSet::DelElem(const int Elem) // исключение элемента множества
 {
 }
-*/
+
 
 // теоретико-множественные операции
 

@@ -40,7 +40,7 @@ TBitField::~TBitField()
 
 int TBitField::GetMemIndex(const int n) const // индекс Мем для бита n
 {
-	if (n < 0)
+	if (n < 0||n>BitLen-1)
 	{
 		throw n;
 	}
@@ -49,6 +49,10 @@ int TBitField::GetMemIndex(const int n) const // индекс Мем для би
 
 TELEM TBitField::GetMemMask(const int n) const // битовая маска для бита n
 {
+	if (n < 0 || n>BitLen - 1)
+	{
+		throw n;
+	}
 	int tmp = n % 32;
 	TELEM one = 1;
 	return one << tmp;
@@ -139,3 +143,4 @@ ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод
 {
 	return ostr;
 }
+
