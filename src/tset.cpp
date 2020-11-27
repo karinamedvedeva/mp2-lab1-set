@@ -181,7 +181,7 @@ ostream& operator<<(ostream &ostr, const TSet &s) // вывод
     {
         if (s.IsMember(i))
         {
-            ostr << i;
+            ostr << i << " ";
         }
     }
     return ostr;
